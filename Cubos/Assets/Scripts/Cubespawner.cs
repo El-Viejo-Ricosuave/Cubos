@@ -30,5 +30,11 @@ public class Cubespawner : MonoBehaviour
 
     }
 
-    
+    private void OnDisable()
+    {
+        GameObject Objeto = Instantiate(prefabcubo);
+        prefabcubo.transform.position = new Vector3(Random.Range(0, 9), Random.Range(9, 12), Random.Range(13, 20));
+        prefabcubo.GetComponent<MeshRenderer>().material.color = new(Random.Range(0.0f, 1.0f), Random.Range(0.0f, 1.0f), Random.Range(0.0f, 1.0f));
+    }
+
 }
