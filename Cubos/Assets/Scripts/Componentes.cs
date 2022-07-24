@@ -4,21 +4,9 @@ using UnityEngine;
 
 public class Componentes : MonoBehaviour
 {
-    public Variables Variables;
-    public Variables2 Variables2;
-    
-
-
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+  public Colores colores;
+  public Cubo1 cubo1;
+  public Cubo2 cubo2; 
+  public Cubo3 cubo3;
+  public Cubo4 cubo4;
 }
