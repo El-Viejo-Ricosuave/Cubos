@@ -2,14 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Cubo2 : MonoBehaviour
+public class Cube5 : MonoBehaviour
 {
+    public Cube1 Cube1;
+    public Cube2 cube2;
+    public Cube3 Cube3;
 
-    public GameObject cubo2;
-    private Material Material;
-
-    bool Variable = false;
-    bool variable2 = true;
+    bool Var5;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -25,24 +25,20 @@ public class Cubo2 : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (Variable == false || variable2 == true)
+        if ((Cube1.Var1 && cube2.Var2) || Cube3.Var3)
         {
-            Variable = true;
+            Var5 = true;
             GetComponent<Renderer>().material.color = Color.white;
-            variable2 = false;
-            GetComponent<Renderer>().material.color = Color.black;
-
         }
         else
         {
-            Variable = false;
+            Var5 = false;
             GetComponent<Renderer>().material.color = Color.black;
-            variable2 = true;
-            GetComponent<Renderer>().material.color = Color.white;
-
-
-
         }
+
+            
     }
 
+
 }
+
